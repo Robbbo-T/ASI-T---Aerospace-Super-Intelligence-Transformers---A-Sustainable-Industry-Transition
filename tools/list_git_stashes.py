@@ -28,7 +28,7 @@ def main() -> int:
             print("Git stashes:")
             print(stashes)
             # Count the number of stashes
-            stash_count = len(stashes.split('\n'))
+            stash_count = len([line for line in stashes.split('\n') if line.strip()])
             print(f"\nTotal: {stash_count} stash(es)")
         else:
             print("No git stashes found.")
